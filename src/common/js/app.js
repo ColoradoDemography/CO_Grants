@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
         layers: [basemaps.light],
         zoomControl: false
     });
-
+console.log("map created");
     var instance = require("./geojson_layers.js")(map);
 
     require("./add_credits")(map);
