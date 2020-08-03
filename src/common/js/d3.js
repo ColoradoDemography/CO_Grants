@@ -251,7 +251,7 @@ module.exports = function(map: Object, p1: Promise, p2: Promise) {
     function refreshdata() {
 
         var flags: {
-            chpg_flag: number;cdbg_flag: number;dr_flag: number;csbg_flag: number;ms_flag: number;dcfa_flag: number;eiaf_flag: number;game_flag: number;redi_flag: number;mj_flag: number;ctf_flag: number;fml_flag: number;sevedd_flag: number;ffb_flag: number;sar_flag: number;vfp_flag: number;pomh_flag: number;ccpi_flag: number;city_flag: number;county_flag: number;district_flag: number;other_flag: number
+            chpg_flag: number;cdbg_flag: number;dr_flag: number;csbg_flag: number;ms_flag: number;dcfa_flag: number;eiaf_flag: number;game_flag: number;redi_flag: number;mj_flag: number;ctf_flag: number;fml_flag: number;sevedd_flag: number;ffb_flag: number;sar_flag: number;vfp_flag: number;pomh_flag: number;ccpi_flag: number;cvrf_flag: number;city_flag: number;county_flag: number;district_flag: number;other_flag: number
         } = {
             chpg_flag: 0,
             cdbg_flag: 0,
@@ -271,6 +271,7 @@ module.exports = function(map: Object, p1: Promise, p2: Promise) {
             ffb_flag: 0,
             sar_flag: 0,
             vfp_flag: 0,
+            cvrf_flag: 0,
            
             city_flag: 0,
             county_flag: 0,
@@ -296,6 +297,7 @@ module.exports = function(map: Object, p1: Promise, p2: Promise) {
         (($('#ffb').is(':checked'))) ? flags.ffb_flag = 1: flags.ffb_flag = 0;
         (($('#sar').is(':checked'))) ? flags.sar_flag = 1: flags.sar_flag = 0;
         (($('#vfp').is(':checked'))) ? flags.vfp_flag = 1: flags.vfp_flag = 0;
+        (($('#cvrf').is(':checked'))) ? flags.cvrf_flag = 1: flags.cvrf_flag = 0;
 
         
 

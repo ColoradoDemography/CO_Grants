@@ -66,6 +66,9 @@ module.exports = function filter_prog_geo_date(d: Object, flags: Object, dateran
     if (program === "CCPI" && flags.ccpi_flag === 0) {
         return false;
     }
+    if (program === "CVRF" && flags.cvrf_flag === 0) {
+        return false;
+    }
     
     //filter geo
     if ((lgtype === 2 || lgtype === 3 || lgtype === 4 || lgtype === 5) && flags.city_flag === 0) {

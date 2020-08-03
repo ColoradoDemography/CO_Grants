@@ -64,6 +64,9 @@ module.exports = function(d: Object): Object {
     if (program === "FFB") {
         start = start + 900000;
     }
+    if (program === "CVRF") {
+        start = start + 1400000;
+    }
 
     //return difference from year Jan 1, 2000 in number of days
     function daydiff(second: Date): number {

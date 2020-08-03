@@ -32,7 +32,8 @@ module.exports = function(d: Object, map: Object, cities: Array < Object > , dat
         dr: 0,
         ms: 0,
         pomh: 0,
-        ccpi: 0
+        ccpi: 0,
+        cvrf: 0
     };
 
     //iterate over results array to get totals for each program
@@ -93,6 +94,9 @@ module.exports = function(d: Object, map: Object, cities: Array < Object > , dat
         if (program === "CCPI") {
             program_totals.ccpi += dollars;
         }
+        if (program === "CVRF") {
+            program_totals.cvrf += dollars;
+        }
     });
 
     function compare(a: Object, b: Object) {
@@ -135,6 +139,7 @@ module.exports = function(d: Object, map: Object, cities: Array < Object > , dat
             ((program_totals.csbg > 0) ? ("<b>CSBG</b>: <i> " + accounting.formatMoney(program_totals.csbg) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
             ((program_totals.chpg > 0) ? ("<b>CHPG</b>: <i> " + accounting.formatMoney(program_totals.chpg) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
             ((program_totals.cdbg > 0) ? ("<b>CDBG</b>: <i> " + accounting.formatMoney(program_totals.cdbg) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
+            ((program_totals.cvrf > 0) ? ("<b>CVRF</b>: <i> " + accounting.formatMoney(program_totals.cvrf) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
             ((program_totals.dr > 0) ? ("<b>DR</b>: <i> " + accounting.formatMoney(program_totals.dr) + "</i>") : "") +
             ((program_totals.ms > 0) ? ("<b>MS</b>: <i> " + accounting.formatMoney(program_totals.ms) + "</i>") : "") +
             ((program_totals.ccpi > 0) ? ("<b>CCPI</b>: <i> " + accounting.formatMoney(program_totals.ccpi) + "</i>") : "") +
