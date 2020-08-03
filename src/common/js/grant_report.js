@@ -143,8 +143,8 @@ module.exports = function(d: Object, map: Object, cities: Array < Object > , dat
             ((program_totals.dr > 0) ? ("<b>DR</b>: <i> " + accounting.formatMoney(program_totals.dr) + "</i>") : "") +
             ((program_totals.ms > 0) ? ("<b>MS</b>: <i> " + accounting.formatMoney(program_totals.ms) + "</i>") : "") +
             ((program_totals.ccpi > 0) ? ("<b>CCPI</b>: <i> " + accounting.formatMoney(program_totals.ccpi) + "</i>") : "") +
-            ((program_totals.pomh > 0) ? ("<b>POMH</b>: <i> " + accounting.formatMoney(program_totals.pomh) + "</i>") : "") +
-            "</span><br /><button style='margin-top: 20px;' id='dlcsv'>Download</button>"
+            ((program_totals.pomh > 0) ? ("<b>POMH</b>: <i> " + accounting.formatMoney(program_totals.pomh) + "</i>") : "") //+
+            //"</span><br /><button style='margin-top: 20px;' id='dlcsv'>Download</button>"
     });
 
 
@@ -152,6 +152,7 @@ module.exports = function(d: Object, map: Object, cities: Array < Object > , dat
 
     dlcsv.onclick = function() {
 
+        console.log("clicked");
         var csvstring: string = "";
         var i: number = 0;
 
