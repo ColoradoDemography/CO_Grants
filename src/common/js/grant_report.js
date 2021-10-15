@@ -43,7 +43,7 @@ module.exports = function(d: Object, map: Object, cities: Array < Object > , dat
         if (program === "FML") {
             program_totals.fml += dollars;
         }
-        if (program === "SEV_DIST") {
+        if (program === "SEV/FML") {
             program_totals.sev_dist += dollars;
         }
         if (program === "VFP") {
@@ -55,7 +55,7 @@ module.exports = function(d: Object, map: Object, cities: Array < Object > , dat
         if (program === "SAR" || program === "SAR Tier 1" || program === "SAR Tier 2" |program === "SAR Tier 3" || program === "SAR EoY") {
             program_totals.sar += dollars;
         }
-        if (program === "FFB") {
+        if (program === "FCB") {
             program_totals.ffb += dollars;
         }
         if (program === "DCFA") {
@@ -94,7 +94,7 @@ module.exports = function(d: Object, map: Object, cities: Array < Object > , dat
         if (program === "CCPI") {
             program_totals.ccpi += dollars;
         }
-        if (program === "CVRF") {
+        if (program === "CVRF" || program === "NEU" || program === "MSOB") {
             program_totals.cvrf += dollars;
         }
     });
@@ -125,12 +125,11 @@ module.exports = function(d: Object, map: Object, cities: Array < Object > , dat
 
     map.openModal({
         content: "<h2 style='margin-bottom: -10px; margin-left: -5px;'>Grant Report for: " + d.govname + "</h2><br /><i>From: " + (daterange.mindate).toString().slice(0, 15) + " to " + (daterange.maxdate).toString().slice(0, 15) + "</i><br /><br /><div style='overflow:auto;'><table id='resultstable'><tr><th align='left'>Description</th><th>Program</th><th>Date</th><th align='right'>Total Award</th></tr>" + content_tbl + "</table></div><br /><h4>Total:  " + accounting.formatMoney(award_ttl) + "</h4><br /><span style='color: grey;'>" +
-            ((program_totals.fml > 0) ? ("<b>FML</b>: <i> " + accounting.formatMoney(program_totals.fml) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
-            ((program_totals.sev_dist > 0) ? ("<b>SEV_DIST</b>: <i> " + accounting.formatMoney(program_totals.sev_dist) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
+            ((program_totals.sev_dist > 0) ? ("<b>SEV/FML</b>: <i> " + accounting.formatMoney(program_totals.sev_dist) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
             ((program_totals.vfp > 0) ? ("<b>VFP</b>: <i> " + accounting.formatMoney(program_totals.vfp) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
             ((program_totals.ctf > 0) ? ("<b>CTF</b>: <i> " + accounting.formatMoney(program_totals.ctf) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
             ((program_totals.sar > 0) ? ("<b>SAR</b>: <i> " + accounting.formatMoney(program_totals.sar) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
-            ((program_totals.ffb > 0) ? ("<b>FFB</b>: <i> " + accounting.formatMoney(program_totals.ffb) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
+            ((program_totals.ffb > 0) ? ("<b>FCB</b>: <i> " + accounting.formatMoney(program_totals.ffb) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
             ((program_totals.dcfa > 0) ? ("<b>DCFA</b>: <i> " + accounting.formatMoney(program_totals.dcfa) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
             ((program_totals.eiaf > 0) ? ("<b>EIAF</b>: <i> " + accounting.formatMoney(program_totals.eiaf) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
             ((program_totals.game > 0) ? ("<b>GAME</b>: <i> " + accounting.formatMoney(program_totals.game) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +

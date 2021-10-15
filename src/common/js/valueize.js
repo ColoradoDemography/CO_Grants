@@ -34,7 +34,7 @@ module.exports = function(d: Object): Object {
     if (program === "CTF") {
         start = start + 1100000;
     }
-    if (program === "SEV_DIST") {
+    if (program === "SEV/FML") {
         start = start + 1000000;
     }
     if (program === "CSBG") {
@@ -61,10 +61,10 @@ module.exports = function(d: Object): Object {
     if (program === "SAR" || program === "SAR Tier 1" || program === "SAR Tier 3" ||program === "SAR Tier 2" || program === "SAR EoY") {
         start = start + 700000;
     }
-    if (program === "FFB") {
+    if (program === "FCB") {
         start = start + 900000;
     }
-    if (program === "CVRF") {
+    if (program === "CVRF" || program === "MSOB" || program === "NEU") {
         start = start + 1400000;
     }
 

@@ -15,7 +15,7 @@ module.exports = function filter_prog_geo_date(d: Object, flags: Object, dateran
     if (program === "FML" && flags.fml_flag === 0) {
         return false;
     }
-    if (program === "SEV_DIST" && flags.sevedd_flag === 0) {
+    if (program === "SEV/FML" && flags.sevedd_flag === 0) {
         return false;
     }
     if (program === "VFP" && flags.vfp_flag === 0) {
@@ -27,7 +27,7 @@ module.exports = function filter_prog_geo_date(d: Object, flags: Object, dateran
     if ((program === "SAR" || program === "SAR Tier 1" || program === "SAR Tier 2" || program === "SAR Tier 3" || program === "SAR EoY") && flags.sar_flag === 0) {
         return false;
     }
-    if (program === "FFB" && flags.ffb_flag === 0) {
+    if (program === "FCB" && flags.ffb_flag === 0) {
         return false;
     }
     if (program === "EIAF" && flags.eiaf_flag === 0) {
@@ -66,7 +66,7 @@ module.exports = function filter_prog_geo_date(d: Object, flags: Object, dateran
     if (program === "CCPI" && flags.ccpi_flag === 0) {
         return false;
     }
-    if (program === "CVRF" && flags.cvrf_flag === 0) {
+    if ((program === "CVRF" || program === "NEU" || program === "MSOB") && flags.cvrf_flag === 0) {
         return false;
     }
     

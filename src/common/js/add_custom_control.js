@@ -39,8 +39,8 @@ module.exports = function(map: Object, refreshdata: Function) {
             '&nbsp;&nbsp;&nbsp;<input class="leg" id="pomh" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(255,0,0)" title="Peace Officer Mental Health Support Program">Peace Officer Mental Health Support Program</span><br />' +
             '&nbsp;&nbsp;&nbsp;<input class="leg" id="redi" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(255,0,0)" title="Rural Economic Development Initiative">Rural Economic Development Initiative</span><br />' +
             '&nbsp;&nbsp;&nbsp;<input class="leg" id="ctf" type="checkbox" />&nbsp;&nbsp;&nbsp;<span style="color:rgb(0,126,0)" title="Conservation Trust Fund">Conservation Trust Fund</span><br />' +
-            '&nbsp;&nbsp;&nbsp;<input class="leg" id="fml" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(0,126,0)" title="Direct Distribution of Federal Mineral Lease Dollars ">Direct Distribution of Federal Mineral Lease Dollar</span><br />' +
-            '&nbsp;&nbsp;&nbsp;<input class="leg" id="sevedd" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(0,126,0)" title="Direct Distribution of Severance Tax Dollars">Direct Distribution of Severance Tax Dollars</span><br />' +
+            
+            '&nbsp;&nbsp;&nbsp;<input class="leg" id="sevedd" type="checkbox" />&nbsp;&nbsp;&nbsp;<span style="color:rgb(0,126,0)" title="Direct Distribution">Direct Distribution</span><br />' +
             '&nbsp;&nbsp;&nbsp;<input class="leg" id="ffb" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(126,0,126)" title="Firefighter Cardiac Benefit Program">Firefighter Cardiac Benefit Program</span><br />' +
             '&nbsp;&nbsp;&nbsp;<input class="leg" id="sar" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(126,0,126)" title="Colorado Search and Rescue Program">Colorado Search and Rescue Program</span><br />' +
             '&nbsp;&nbsp;&nbsp;<input class="leg" id="vfp" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(126,0,126)" title="Volunteer Firefighter Pension">Volunteer Firefighter Pension</span><br />' +
@@ -89,9 +89,7 @@ module.exports = function(map: Object, refreshdata: Function) {
     document.getElementById("ctf").addEventListener("click", function() {
         refreshdata();
     }, false);
-    document.getElementById("fml").addEventListener("click", function() {
-        refreshdata();
-    }, false);
+    
     document.getElementById("sevedd").addEventListener("click", function() {
         refreshdata();
     }, false);
