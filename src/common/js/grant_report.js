@@ -94,7 +94,7 @@ module.exports = function(d: Object, map: Object, cities: Array < Object > , dat
         if (program === "CCPI") {
             program_totals.ccpi += dollars;
         }
-        if (program === "CVRF" || program === "NEU" || program === "MSOB") {
+        if (program === "CVRF" || program === "NEU" || program === "MSOB" || program === "SBR") {
             program_totals.cvrf += dollars;
         }
     });

@@ -7,7 +7,7 @@ module.exports = function getcolor(program: string): string {
     if (program === "FML" || program === "CTF" || program === "SEV/FML") {
         return "green";
     }
-    if (program === "CSBG" || program === "CDBG" || program === "CDBGED" || program === "CDBGPF" || program === "CHPG" || program === "MS" || program === "CVRF" || program === "NEU" || program === "MSOB") {
+    if (program === "CSBG" || program === "CDBG" || program === "CDBGED" || program === "CDBGPF" || program === "CHPG" || program === "MS" || program === "CVRF" || program === "NEU" || program === "MSOB" || program === "SBR") {
         return "blue";
     }
     if (program === "EIAF" || program === "GAME" || program === "REDI" || program === "MJ" || program === "GBMJ" || program === "POMH" || program === "CCPI"|| program === "DCFA") {

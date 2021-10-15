@@ -27,11 +27,11 @@ module.exports = function(map: Object, refreshdata: Function) {
             '</br><div id="tabs-1"><h4 style="margion-top: 10px margin-bottom: 10px;">Programs&nbsp;&nbsp;<span id="prgbtn" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" role="button" aria-disabled="false" style="margin-top: -10px; margin-left: 20px;" title="Program Information" ><span class="ui-button-icon-primary ui-icon ui-icon-help"></span><span class="ui-button-text">Program Information</span></span></h4>' +
             '&nbsp;&nbsp;&nbsp;<input class="leg" id="chpg" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(0,0,255)" title="Colorado Heritage Planning Grants">Colorado Heritage Planning Grants</span><br />' +
             '&nbsp;&nbsp;&nbsp;<input class="leg" id="cdbg" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(0,0,255)" title="Community Development Block Grants">Community Development Block Grants</span><br />' +
-            '&nbsp;&nbsp;&nbsp;<input class="leg" id="dr" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(0,0,255)" title="Community Development Block Grant Disaster Recovery">Community Development Block Grant Disaster Recovery </span><br />' +
+            
             '&nbsp;&nbsp;&nbsp;<input class="leg" id="csbg" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(0,0,255)" title="Community Services Block Grants">Community Services Block Grants</span><br />' +
             '&nbsp;&nbsp;&nbsp;<input class="leg" id="cvrf" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(0,0,255)" title="Coronavirus Relief Fund">Coronavirus Relief Fund</span><br />' +
             '&nbsp;&nbsp;&nbsp;<input class="leg" id="ms" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(0,0,255)" title="Main Street Program">Main Street Program</span><br />' +
-            '&nbsp;&nbsp;&nbsp;<input class="leg" id="ccpi" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(255,0,0)" title="Community Crime Prevention Initiative">Community Crime Prevention Initiative</span><br />' +
+            
             '&nbsp;&nbsp;&nbsp;<input class="leg" id="dcfa" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(255,0,0)" title="Defense Counsel on First Appearance">Defense Counsel on First Appearance</span><br />' +
             '&nbsp;&nbsp;&nbsp;<input class="leg" id="eiaf" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(255,0,0)" title="Energy and Mineral Impact Assistance Fund">Energy and Mineral Impact Assistance Fund</span><br />' +
             '&nbsp;&nbsp;&nbsp;<input class="leg" id="game" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(255,0,0)" title="Local Government Limited Gaming Impact Program">Local Government Limited Gaming Impact Program</span><br />' +
@@ -102,7 +102,7 @@ module.exports = function(map: Object, refreshdata: Function) {
     document.getElementById("vfp").addEventListener("click", function() {
         refreshdata();
     }, false);
-    document.getElementById("dr").addEventListener("click", function() {
+    document.getElementById("cvrf").addEventListener("click", function() {
         refreshdata();
     }, false);
     document.getElementById("ccpi").addEventListener("click", function() {

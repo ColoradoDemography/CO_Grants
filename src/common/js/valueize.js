@@ -64,7 +64,7 @@ module.exports = function(d: Object): Object {
     if (program === "FCB") {
         start = start + 900000;
     }
-    if (program === "CVRF" || program === "MSOB" || program === "NEU") {
+    if (program === "CVRF" || program === "MSOB" || program === "NEU" || program === "SBR") {
         start = start + 1400000;
     }
 
