@@ -33,7 +33,10 @@ module.exports = function(d: Object, map: Object, cities: Array < Object > , dat
         ms: 0,
         pomh: 0,
         ccpi: 0,
-        cvrf: 0
+        cvrf: 0,
+        msob: 0,
+        neu: 0,
+        sbr: 0
     };
 
     //iterate over results array to get totals for each program
@@ -94,8 +97,17 @@ module.exports = function(d: Object, map: Object, cities: Array < Object > , dat
         if (program === "CCPI") {
             program_totals.ccpi += dollars;
         }
-        if (program === "CVRF" || program === "NEU" || program === "MSOB" || program === "SBR") {
+        if (program === "CVRF") {
             program_totals.cvrf += dollars;
+        }
+        if (program === "MSOB") {
+            program_totals.msob += dollars;
+        }
+        if (program === "NEU") {
+            program_totals.neu += dollars;
+        }
+        if (program === "SBR") {
+            program_totals.sbr += dollars;
         }
     });
 
@@ -139,6 +151,9 @@ module.exports = function(d: Object, map: Object, cities: Array < Object > , dat
             ((program_totals.chpg > 0) ? ("<b>CHPG</b>: <i> " + accounting.formatMoney(program_totals.chpg) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
             ((program_totals.cdbg > 0) ? ("<b>CDBG</b>: <i> " + accounting.formatMoney(program_totals.cdbg) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
             ((program_totals.cvrf > 0) ? ("<b>CVRF</b>: <i> " + accounting.formatMoney(program_totals.cvrf) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
+            ((program_totals.cvrf > 0) ? ("<b>MSOB</b>: <i> " + accounting.formatMoney(program_totals.msob) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
+            ((program_totals.cvrf > 0) ? ("<b>NEU</b>: <i> " + accounting.formatMoney(program_totals.neu) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
+            ((program_totals.cvrf > 0) ? ("<b>SBR</b>: <i> " + accounting.formatMoney(program_totals.sbr) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
             ((program_totals.dr > 0) ? ("<b>DR</b>: <i> " + accounting.formatMoney(program_totals.dr) + "</i>") : "") +
             ((program_totals.ms > 0) ? ("<b>MS</b>: <i> " + accounting.formatMoney(program_totals.ms) + "</i>") : "") +
             ((program_totals.ccpi > 0) ? ("<b>CCPI</b>: <i> " + accounting.formatMoney(program_totals.ccpi) + "</i>") : "") +

@@ -66,7 +66,16 @@ module.exports = function filter_prog_geo_date(d: Object, flags: Object, dateran
     if (program === "CCPI" && flags.ccpi_flag === 0) {
         return false;
     }
-    if ((program === "CVRF" || program === "NEU" || program === "MSOB" || program === "SBR") && flags.cvrf_flag === 0) {
+    if (program === "CVRF"  && flags.cvrf_flag === 0) {
+        return false;
+    }
+    if (program === "NEU" && flags.neu_flag === 0) {
+        return false;
+    }
+    if (program === "MSOB" && flags.msob_flag === 0) {
+        return false;
+    }
+    if (program === "SBR" && flags.sbr_flag === 0) {
         return false;
     }
     

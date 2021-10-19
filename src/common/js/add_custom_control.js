@@ -31,6 +31,9 @@ module.exports = function(map: Object, refreshdata: Function) {
             '&nbsp;&nbsp;&nbsp;<input class="leg" id="csbg" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(0,0,255)" title="Community Services Block Grants">Community Services Block Grants</span><br />' +
             '&nbsp;&nbsp;&nbsp;<input class="leg" id="cvrf" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(0,0,255)" title="Coronavirus Relief Fund">Coronavirus Relief Fund</span><br />' +
             '&nbsp;&nbsp;&nbsp;<input class="leg" id="ms" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(0,0,255)" title="Main Street Program">Main Street Program</span><br />' +
+            '&nbsp;&nbsp;&nbsp;<input class="leg" id="msob" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(0,0,255)" title="Main Street: Open for Business">Main Street: Open for Business</span><br />' +
+            '&nbsp;&nbsp;&nbsp;<input class="leg" id="neu" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(0,0,255)" title="American Rescue Plan: NEU">American Rescue Plan: NEU</span><br />' +
+            '&nbsp;&nbsp;&nbsp;<input class="leg" id="sbr" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(0,0,255)" title="Small Business Relief Program">Small Business Relief Program</span><br />' +
             
             '&nbsp;&nbsp;&nbsp;<input class="leg" id="dcfa" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(255,0,0)" title="Defense Counsel on First Appearance">Defense Counsel on First Appearance</span><br />' +
             '&nbsp;&nbsp;&nbsp;<input class="leg" id="eiaf" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(255,0,0)" title="Energy and Mineral Impact Assistance Fund">Energy and Mineral Impact Assistance Fund</span><br />' +
@@ -103,6 +106,15 @@ module.exports = function(map: Object, refreshdata: Function) {
         refreshdata();
     }, false);
     document.getElementById("cvrf").addEventListener("click", function() {
+        refreshdata();
+    }, false);
+    document.getElementById("neu").addEventListener("click", function() {
+        refreshdata();
+    }, false);
+    document.getElementById("msob").addEventListener("click", function() {
+        refreshdata();
+    }, false);
+    document.getElementById("sbr").addEventListener("click", function() {
         refreshdata();
     }, false);
     document.getElementById("ccpi").addEventListener("click", function() {
