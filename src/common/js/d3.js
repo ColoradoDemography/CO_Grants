@@ -251,7 +251,7 @@ module.exports = function(map: Object, p1: Promise, p2: Promise) {
     function refreshdata() {
 
         var flags: {
-            chpg_flag: number;cdbg_flag: number;dr_flag: number;csbg_flag: number;ms_flag: number;dcfa_flag: number;eiaf_flag: number;game_flag: number;redi_flag: number;mj_flag: number;ctf_flag: number;fml_flag: number;sevedd_flag: number;ffb_flag: number;sar_flag: number;vfp_flag: number;pomh_flag: number;ccpi_flag: number;cvrf_flag: number;city_flag: number;county_flag: number;district_flag: number;other_flag: number
+            chpg_flag: number;cdbg_flag: number;dr_flag: number;csbg_flag: number;ms_flag: number;dcfa_flag: number;eiaf_flag: number;game_flag: number;redi_flag: number;mj_flag: number;ctf_flag: number;fml_flag: number;sevedd_flag: number;ffb_flag: number;sar_flag: number;vfp_flag: number;pomh_flag: number;ccpi_flag: number;cvrf_flag: number;sbr_flag: number;msob_flag: number;neu_flag: number;city_flag: number;county_flag: number;district_flag: number;other_flag: number
         } = {
             chpg_flag: 0,
             cdbg_flag: 0,
@@ -272,6 +272,9 @@ module.exports = function(map: Object, p1: Promise, p2: Promise) {
             sar_flag: 0,
             vfp_flag: 0,
             cvrf_flag: 0,
+            msob_flag: 0,
+            sbr_flag: 0,
+            neu_flag: 0,
            
             city_flag: 0,
             county_flag: 0,
@@ -298,7 +301,9 @@ module.exports = function(map: Object, p1: Promise, p2: Promise) {
         (($('#sar').is(':checked'))) ? flags.sar_flag = 1: flags.sar_flag = 0;
         (($('#vfp').is(':checked'))) ? flags.vfp_flag = 1: flags.vfp_flag = 0;
         (($('#cvrf').is(':checked'))) ? flags.cvrf_flag = 1: flags.cvrf_flag = 0;
-
+        (($('#msob').is(':checked'))) ? flags.msob_flag = 1: flags.msob_flag = 0;
+        (($('#sbr').is(':checked'))) ? flags.sbr_flag = 1: flags.sbr_flag = 0;
+        (($('#neu').is(':checked'))) ? flags.neu_flag = 1: flags.neu_flag = 0;
         
 
         (($('#city').is(':checked'))) ? flags.city_flag = 1: flags.city_flag = 0;
