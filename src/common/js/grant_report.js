@@ -36,7 +36,9 @@ module.exports = function(d: Object, map: Object, cities: Array < Object > , dat
         cvrf: 0,
         msob: 0,
         neu: 0,
-        sbr: 0
+        sbr: 0,
+        ihoi: 0,
+        ihop: 0
     };
 
     //iterate over results array to get totals for each program
@@ -109,6 +111,12 @@ module.exports = function(d: Object, map: Object, cities: Array < Object > , dat
         if (program === "SBR") {
             program_totals.sbr += dollars;
         }
+        if (program === "IHOI") {
+            program_totals.sbr += dollars;
+        }
+        if (program === "IHOP") {
+            program_totals.sbr += dollars;
+        }
     });
 
     function compare(a: Object, b: Object) {
@@ -157,7 +165,9 @@ module.exports = function(d: Object, map: Object, cities: Array < Object > , dat
             ((program_totals.dr > 0) ? ("<b>DR</b>: <i> " + accounting.formatMoney(program_totals.dr) + "</i>") : "") +
             ((program_totals.ms > 0) ? ("<b>MS</b>: <i> " + accounting.formatMoney(program_totals.ms) + "</i>") : "") +
             ((program_totals.ccpi > 0) ? ("<b>CCPI</b>: <i> " + accounting.formatMoney(program_totals.ccpi) + "</i>") : "") +
-            ((program_totals.pomh > 0) ? ("<b>POMH</b>: <i> " + accounting.formatMoney(program_totals.pomh) + "</i>") : "") //+
+            ((program_totals.pomh > 0) ? ("<b>POMH</b>: <i> " + accounting.formatMoney(program_totals.pomh) + "</i>") : "") +
+            ((program_totals.pomh > 0) ? ("<b>IHOI</b>: <i> " + accounting.formatMoney(program_totals.ihoi) + "</i>") : "") +
+            ((program_totals.pomh > 0) ? ("<b>IHOP</b>: <i> " + accounting.formatMoney(program_totals.ihop) + "</i>") : "")//+
             //"</span><br /><button style='margin-top: 20px;' id='dlcsv'>Download</button>"
     });
 

@@ -275,6 +275,8 @@ module.exports = function(map: Object, p1: Promise, p2: Promise) {
             msob_flag: 0,
             sbr_flag: 0,
             neu_flag: 0,
+            ihoi_flag: 0,
+            ihop_flag: 0,
            
             city_flag: 0,
             county_flag: 0,
@@ -304,6 +306,8 @@ module.exports = function(map: Object, p1: Promise, p2: Promise) {
         (($('#msob').is(':checked'))) ? flags.msob_flag = 1: flags.msob_flag = 0;
         (($('#sbr').is(':checked'))) ? flags.sbr_flag = 1: flags.sbr_flag = 0;
         (($('#neu').is(':checked'))) ? flags.neu_flag = 1: flags.neu_flag = 0;
+        (($('#ihoi').is(':checked'))) ? flags.ihoi_flag = 1: flags.ihoi_flag = 0;
+        (($('#ihop').is(':checked'))) ? flags.ihop_flag = 1: flags.ihop_flag = 0;
         
 
         (($('#city').is(':checked'))) ? flags.city_flag = 1: flags.city_flag = 0;

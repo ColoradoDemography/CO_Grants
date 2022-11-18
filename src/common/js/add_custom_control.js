@@ -30,6 +30,8 @@ module.exports = function(map: Object, refreshdata: Function) {
             
             '&nbsp;&nbsp;&nbsp;<input class="leg" id="csbg" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(0,0,255)" title="Community Services Block Grants">Community Services Block Grants</span><br />' +
             '&nbsp;&nbsp;&nbsp;<input class="leg" id="cvrf" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(0,0,255)" title="Coronavirus Relief Fund">Coronavirus Relief Fund</span><br />' +
+            '&nbsp;&nbsp;&nbsp;<input class="leg" id="ihoi" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(0,0,255)" title="Housing Incentive Grant Program">Housing Incentive Grant Program</span><br />' +
+            '&nbsp;&nbsp;&nbsp;<input class="leg" id="ihop" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(0,0,255)" title="Housing Planning Grant Program">Housing Planning Grant Program</span><br />' +
             '&nbsp;&nbsp;&nbsp;<input class="leg" id="ms" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(0,0,255)" title="Main Street Program">Main Street Program</span><br />' +
             '&nbsp;&nbsp;&nbsp;<input class="leg" id="msob" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(0,0,255)" title="Main Street: Open for Business">Main Street: Open for Business</span><br />' +
             '&nbsp;&nbsp;&nbsp;<input class="leg" id="neu" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(0,0,255)" title="American Rescue Plan: NEU">American Rescue Plan: NEU</span><br />' +
@@ -47,6 +49,7 @@ module.exports = function(map: Object, refreshdata: Function) {
             '&nbsp;&nbsp;&nbsp;<input class="leg" id="ffb" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(126,0,126)" title="Firefighter Cardiac Benefit Program">Firefighter Cardiac Benefit Program</span><br />' +
             '&nbsp;&nbsp;&nbsp;<input class="leg" id="sar" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(126,0,126)" title="Colorado Search and Rescue Program">Colorado Search and Rescue Program</span><br />' +
             '&nbsp;&nbsp;&nbsp;<input class="leg" id="vfp" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(126,0,126)" title="Volunteer Firefighter Pension">Volunteer Firefighter Pension</span><br />' +
+
             
             '<hr>' + '&nbsp;&nbsp;&nbsp;<input class="leg" id="city" type="checkbox" checked />&nbsp;&nbsp;&nbsp;City<br />' +
             '&nbsp;&nbsp;&nbsp;<input class="leg" id="county" type="checkbox" checked />&nbsp;&nbsp;&nbsp;County<br />' +
@@ -124,6 +127,12 @@ module.exports = function(map: Object, refreshdata: Function) {
         refreshdata();
     }, false);
     document.getElementById("ms").addEventListener("click", function() {
+        refreshdata();
+    }, false);
+    document.getElementById("ihoi").addEventListener("click", function() {
+        refreshdata();
+    }, false);
+    document.getElementById("ihop").addEventListener("click", function() {
         refreshdata();
     }, false);
     
