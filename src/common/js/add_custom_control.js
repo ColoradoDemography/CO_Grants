@@ -43,8 +43,9 @@ module.exports = function(map: Object, refreshdata: Function) {
              '&nbsp;&nbsp;&nbsp;<input class="leg" id="psi" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(0,0,255)" title="Pools Special Initiative">Pools Special Initiative</span><br />' +
              '&nbsp;&nbsp;&nbsp;<input class="leg" id="rnss" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(0,0,255)" title="Renewable State Stimulus">Renewable State Stimulus</span><br />' +            
              '&nbsp;&nbsp;&nbsp;<input class="leg" id="sbr" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(0,0,255)" title="Small Business Relief Program">Small Business Relief Program</span><br />' +
-            '&nbsp;&nbsp;&nbsp;<input class="leg" id="scig" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(0,0,255)" title="Strong Communities Initiative">Strong Communities Initiative</span><br />' +            
-            '&nbsp;&nbsp;&nbsp;<input class="leg" id="dcfa" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(255,0,0)" title="Defense Counsel on First Appearance">Defense Counsel on First Appearance</span><br />' +
+             '&nbsp;&nbsp;&nbsp;<input class="leg" id="scig" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(0,0,255)" title="Strong Communities Initiative">Strong Communities Initiative</span><br />' +            
+            '&nbsp;&nbsp;&nbsp;<input class="leg" id="ccpi" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(255,0,0)" title="Community Crime Prevention Initiative">Community Crime Prevention Initiative</span><br />' +
+             '&nbsp;&nbsp;&nbsp;<input class="leg" id="dcfa" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(255,0,0)" title="Defense Counsel on First Appearance">Defense Counsel on First Appearance</span><br />' +
             '&nbsp;&nbsp;&nbsp;<input class="leg" id="lecs" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(255,0,0)" title="Law Enforcement Community Services Grant Programm">Law Enforcement Community Services Grant Program</span><br />' +
             '&nbsp;&nbsp;&nbsp;<input class="leg" id="game" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(255,0,0)" title="Local Government Limited Gaming Impact Program">Local Government Limited Gaming Impact Program</span><br />' +
             '&nbsp;&nbsp;&nbsp;<input class="leg" id="mj" type="checkbox" checked />&nbsp;&nbsp;&nbsp;<span style="color:rgb(255,0,0)" title="Marijuana Impact Grant Programs">Marijuana Impact Grant Programs</span><br />' +
@@ -121,9 +122,7 @@ module.exports = function(map: Object, refreshdata: Function) {
     document.getElementById("neu").addEventListener("click", function() {
         refreshdata();
     }, false);
-    document.getElementById("msob").addEventListener("click", function() {
-        refreshdata();
-    }, false);
+    
     document.getElementById("sbr").addEventListener("click", function() {
         refreshdata();
     }, false);
