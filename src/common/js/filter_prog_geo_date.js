@@ -15,7 +15,7 @@ module.exports = function filter_prog_geo_date(d: Object, flags: Object, dateran
     if (program === "FML" && flags.fml_flag === 0) {
         return false;
     }
-    if (program === "SEV/FML" && flags.sevedd_flag === 0) {
+    if (program === "SEV_FML" && flags.sevedd_flag === 0) {
         return false;
     }
     if (program === "VFP" && flags.vfp_flag === 0) {

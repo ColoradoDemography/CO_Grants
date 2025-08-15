@@ -4,7 +4,7 @@ module.exports = function getcolor(program: string): string {
     'use strict';
 
     //["FML", "SEV_DIST", "VFP", "CTF", "SAR", "FFB", "EIAF", "GAME", "REDI", "CSBG", "CDBG"];
-    if (program === "FML" || program === "CTF" || program === "SEV/FML") {
+    if (program === "FML" || program === "CTF" || program === "SEV_FML") {
         return "green";
     }
     if (program === "CSBG" || program === "CDBG" || program === "CDBGED" || program === "CDBGPF" || program === "CHPG" || program === "MS" || program === "CVRF" || program === "NEU" || program === "MSOB" || program === "SBR" || program === "IHOI" || program === "IHOP") {
