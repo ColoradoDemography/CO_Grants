@@ -24,7 +24,7 @@ module.exports = function filter_prog_geo_date(d: Object, flags: Object, dateran
     if (program === "CTF" && flags.ctf_flag === 0) {
         return false;
     }
-    if ((program === "SAR" || program === "SAR Tier 1" || program === "SAR Tier 2" || program === "SAR Tier 3" || program === "SAR EoY") && flags.sar_flag === 0) {
+    if ((program === "SAR" || program === "SAR Tier 1" || program === "SAR Tier 2" || program === "SAR Tier 3" || program === "SAR EoY" || program === "BSARFX") && flags.sar_flag === 0) {
         return false;
     }
     if (program === "FCB" && flags.ffb_flag === 0) {
@@ -48,7 +48,7 @@ module.exports = function filter_prog_geo_date(d: Object, flags: Object, dateran
     if (program === "CHPG" && flags.chpg_flag === 0) {
         return false;
     }
-    if ((program === "CDBG" || program === "CDBGED" || program === "CDBGPF") && flags.cdbg_flag === 0) {
+    if ((program === "CDBG" || program === "CDBGED" || program === "CDBGPF" || program === "CDBGPS") && flags.cdbg_flag === 0) {
         return false;
     }
     if (program === "DR" && flags.dr_flag === 0) {
@@ -81,7 +81,40 @@ module.exports = function filter_prog_geo_date(d: Object, flags: Object, dateran
     if (program === "IHOI" && flags.ihoi_flag === 0) {
         return false;
     }
-    if (program === "IHOP" && flags.ihop_flag === 0) {
+    if (program === "PSI" && flags.psi_flag === 0) {
+        return false;
+    }
+    if ((program === "IHOP"  || program === "HPLN") && flags.ihop_flag === 0) {
+        return false;
+    }
+    if (program === "LOMA" && flags.loma_flag === 0) {
+        return false;
+    }
+    if (program === "LPC" && flags.lpc_flag === 0) {
+        return false;
+    }
+    if (program === "BBFS" && flags.bbfs_flag === 0) {
+        return false;
+    }
+    if (program === "CENS" && flags.cens_flag === 0) {
+        return false;
+    }
+    if (program === "LECS" && flags.lecs_flag === 0) {
+        return false;
+    }
+    if ((program === "MCRF"  || program === "MCRG") && flags.mc_flag === 0) {
+        return false;
+    }
+    if (program === "MRP" && flags.mrp_flag === 0) {
+        return false;
+    }
+    if (program === "NPI" && flags.npi_flag === 0) {
+        return false;
+    }
+    if (program === "RNSS" && flags.rnss_flag === 0) {
+        return false;
+    }
+    if (program === "SCIG" && flags.scig_flag === 0) {
         return false;
     }
     

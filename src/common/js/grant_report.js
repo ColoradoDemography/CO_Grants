@@ -38,7 +38,18 @@ module.exports = function(d: Object, map: Object, cities: Array < Object > , dat
         neu: 0,
         sbr: 0,
         ihoi: 0,
-        ihop: 0
+        ihop: 0,
+        psi: 0,
+        loma: 0,
+        lpc: 0,
+        bbfs: 0,
+        cens: 0,
+        lecs: 0,
+        mc: 0,
+        mrp: 0,
+        npi: 0,
+        rnss: 0,
+        scig: 0
     };
 
     //iterate over results array to get totals for each program
@@ -48,7 +59,7 @@ module.exports = function(d: Object, map: Object, cities: Array < Object > , dat
         if (program === "FML") {
             program_totals.fml += dollars;
         }
-        if (program === "SEV/FML") {
+        if (program === "SEV_FML") {
             program_totals.sev_dist += dollars;
         }
         if (program === "VFP") {
@@ -57,7 +68,7 @@ module.exports = function(d: Object, map: Object, cities: Array < Object > , dat
         if (program === "CTF") {
             program_totals.ctf += dollars;
         }
-        if (program === "SAR" || program === "SAR Tier 1" || program === "SAR Tier 2" |program === "SAR Tier 3" || program === "SAR EoY") {
+        if (program === "SAR" || program === "SAR Tier 1" || program === "SAR Tier 2" |program === "SAR Tier 3" || program === "SAR EoY" || program === "BSARFX") {
             program_totals.sar += dollars;
         }
         if (program === "FCB") {
@@ -84,10 +95,10 @@ module.exports = function(d: Object, map: Object, cities: Array < Object > , dat
         if (program === "CHPG") {
             program_totals.chpg += dollars;
         }
-        if (program === "CDBG" || program === "CDBGED" || program === "CDBGPF") {
+        if (program === "CDBG" || program === "CDBGED" || program === "CDBGPF" || program === "CDBGPS") {
             program_totals.cdbg += dollars;
         }
-        if (program === "DR") {
+        if (program === "DR" || program === "DRR") {
             program_totals.dr += dollars;
         }
         if (program === "MS") {
@@ -112,10 +123,43 @@ module.exports = function(d: Object, map: Object, cities: Array < Object > , dat
             program_totals.sbr += dollars;
         }
         if (program === "IHOI") {
-            program_totals.sbr += dollars;
+            program_totals.ihoi += dollars;
         }
-        if (program === "IHOP") {
-            program_totals.sbr += dollars;
+        if (program === "IHOP" || program === "HPLN") {
+            program_totals.ihop += dollars;
+        }
+        if (program === "PSI") {
+            program_totals.psi += dollars;
+        }
+        if (program === "LOMA") {
+            program_totals.loma += dollars;
+        }
+        if (program === "LPC") {
+            program_totals.lpc += dollars;
+        }
+        if (program === "BBFS") {
+            program_totals.bbfs += dollars;
+        }
+        if (program === "CENS") {
+            program_totals.cens += dollars;
+        }
+        if (program === "LECS") {
+            program_totals.lecs += dollars;
+        }
+        if (program === "MCRF" || program === "MCRG") {
+            program_totals.mc += dollars;
+        }
+        if (program === "MRP") {
+            program_totals.mrp += dollars;
+        }
+        if (program === "NPI") {
+            program_totals.npi += dollars;
+        }
+        if (program === "RNSS") {
+            program_totals.rnss += dollars;
+        }
+        if (program === "SCIG") {
+            program_totals.scig += dollars;
         }
     });
 
@@ -145,7 +189,7 @@ module.exports = function(d: Object, map: Object, cities: Array < Object > , dat
 
     map.openModal({
         content: "<h2 style='margin-bottom: -10px; margin-left: -5px;'>Grant Report for: " + d.govname + "</h2><br /><i>From: " + (daterange.mindate).toString().slice(0, 15) + " to " + (daterange.maxdate).toString().slice(0, 15) + "</i><br /><br /><div style='overflow:auto;'><table id='resultstable'><tr><th align='left'>Description</th><th>Program</th><th>Date</th><th align='right'>Total Award</th></tr>" + content_tbl + "</table></div><br /><h4>Total:  " + accounting.formatMoney(award_ttl) + "</h4><br /><span style='color: grey;'>" +
-            ((program_totals.sev_dist > 0) ? ("<b>SEV/FML</b>: <i> " + accounting.formatMoney(program_totals.sev_dist) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
+            ((program_totals.sev_dist > 0) ? ("<b>SEV_FML</b>: <i> " + accounting.formatMoney(program_totals.sev_dist) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
             ((program_totals.vfp > 0) ? ("<b>VFP</b>: <i> " + accounting.formatMoney(program_totals.vfp) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
             ((program_totals.ctf > 0) ? ("<b>CTF</b>: <i> " + accounting.formatMoney(program_totals.ctf) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
             ((program_totals.sar > 0) ? ("<b>SAR</b>: <i> " + accounting.formatMoney(program_totals.sar) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
@@ -159,15 +203,26 @@ module.exports = function(d: Object, map: Object, cities: Array < Object > , dat
             ((program_totals.chpg > 0) ? ("<b>CHPG</b>: <i> " + accounting.formatMoney(program_totals.chpg) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
             ((program_totals.cdbg > 0) ? ("<b>CDBG</b>: <i> " + accounting.formatMoney(program_totals.cdbg) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
             ((program_totals.cvrf > 0) ? ("<b>CVRF</b>: <i> " + accounting.formatMoney(program_totals.cvrf) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
-            ((program_totals.cvrf > 0) ? ("<b>MSOB</b>: <i> " + accounting.formatMoney(program_totals.msob) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
-            ((program_totals.cvrf > 0) ? ("<b>NEU</b>: <i> " + accounting.formatMoney(program_totals.neu) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
-            ((program_totals.cvrf > 0) ? ("<b>SBR</b>: <i> " + accounting.formatMoney(program_totals.sbr) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
-            ((program_totals.dr > 0) ? ("<b>DR</b>: <i> " + accounting.formatMoney(program_totals.dr) + "</i>") : "") +
-            ((program_totals.ms > 0) ? ("<b>MS</b>: <i> " + accounting.formatMoney(program_totals.ms) + "</i>") : "") +
-            ((program_totals.ccpi > 0) ? ("<b>CCPI</b>: <i> " + accounting.formatMoney(program_totals.ccpi) + "</i>") : "") +
-            ((program_totals.pomh > 0) ? ("<b>POMH</b>: <i> " + accounting.formatMoney(program_totals.pomh) + "</i>") : "") +
-            ((program_totals.pomh > 0) ? ("<b>IHOI</b>: <i> " + accounting.formatMoney(program_totals.ihoi) + "</i>") : "") +
-            ((program_totals.pomh > 0) ? ("<b>IHOP</b>: <i> " + accounting.formatMoney(program_totals.ihop) + "</i>") : "")//+
+            ((program_totals.msob > 0) ? ("<b>MSOB</b>: <i> " + accounting.formatMoney(program_totals.msob) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
+            ((program_totals.neu > 0) ? ("<b>NEU</b>: <i> " + accounting.formatMoney(program_totals.neu) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
+            ((program_totals.sbr > 0) ? ("<b>SBR</b>: <i> " + accounting.formatMoney(program_totals.sbr) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
+            ((program_totals.dr > 0) ? ("<b>DR</b>: <i> " + accounting.formatMoney(program_totals.dr) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
+            ((program_totals.ms > 0) ? ("<b>MS</b>: <i> " + accounting.formatMoney(program_totals.ms) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
+            ((program_totals.ccpi > 0) ? ("<b>CCPI</b>: <i> " + accounting.formatMoney(program_totals.ccpi) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
+            ((program_totals.pomh > 0) ? ("<b>POMH</b>: <i> " + accounting.formatMoney(program_totals.pomh) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
+            ((program_totals.ihoi > 0) ? ("<b>IHOI</b>: <i> " + accounting.formatMoney(program_totals.ihoi) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
+            ((program_totals.ihop > 0) ? ("<b>IHOP</b>: <i> " + accounting.formatMoney(program_totals.ihop) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
+            ((program_totals.psi > 0) ? ("<b>PSI</b>: <i> " + accounting.formatMoney(program_totals.psi) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
+            ((program_totals.loma > 0) ? ("<b>LOMA</b>: <i> " + accounting.formatMoney(program_totals.loma) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
+            ((program_totals.lpc > 0) ? ("<b>LPC</b>: <i> " + accounting.formatMoney(program_totals.lpc) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
+            ((program_totals.bbfs > 0) ? ("<b>BBFS</b>: <i> " + accounting.formatMoney(program_totals.bbfs) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
+            ((program_totals.cens > 0) ? ("<b>CENS</b>: <i> " + accounting.formatMoney(program_totals.cens) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
+            ((program_totals.lecs > 0) ? ("<b>LECS</b>: <i> " + accounting.formatMoney(program_totals.lecs) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
+            ((program_totals.mc > 0) ? ("<b>MC</b>: <i> " + accounting.formatMoney(program_totals.mc) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
+            ((program_totals.mrp > 0) ? ("<b>MRP</b>: <i> " + accounting.formatMoney(program_totals.mrp) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
+            ((program_totals.npi > 0) ? ("<b>NPI</b>: <i> " + accounting.formatMoney(program_totals.npi) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
+            ((program_totals.rnss > 0) ? ("<b>RNSS</b>: <i> " + accounting.formatMoney(program_totals.rnss) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
+            ((program_totals.scig > 0) ? ("<b>SCIG</b>: <i> " + accounting.formatMoney(program_totals.scig) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "")
             //"</span><br /><button style='margin-top: 20px;' id='dlcsv'>Download</button>"
     });
 

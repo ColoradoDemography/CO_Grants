@@ -251,7 +251,43 @@ module.exports = function(map: Object, p1: Promise, p2: Promise) {
     function refreshdata() {
 
         var flags: {
-            chpg_flag: number;cdbg_flag: number;dr_flag: number;csbg_flag: number;ms_flag: number;dcfa_flag: number;eiaf_flag: number;game_flag: number;redi_flag: number;mj_flag: number;ctf_flag: number;fml_flag: number;sevedd_flag: number;ffb_flag: number;sar_flag: number;vfp_flag: number;pomh_flag: number;ccpi_flag: number;cvrf_flag: number;sbr_flag: number;msob_flag: number;neu_flag: number;city_flag: number;county_flag: number;district_flag: number;other_flag: number
+            chpg_flag: number;
+            cdbg_flag: number;
+            dr_flag: number;
+            csbg_flag: number;
+            ms_flag: number;
+            dcfa_flag: number;
+            eiaf_flag: number;
+            game_flag: number;
+            redi_flag: number;
+            mj_flag: number;
+            ctf_flag: number;
+            fml_flag: number;
+            sevedd_flag: number;
+            ffb_flag: number;
+            sar_flag: number;
+            vfp_flag: number;
+            pomh_flag: number;
+            ccpi_flag: number;
+            cvrf_flag: number;
+            sbr_flag: number;
+            msob_flag: number;
+            neu_flag: number;
+            bbfs_flag: number;
+            cens_flag: number;
+            loma_flag: number;
+            lecs_flag: number;
+            lpc_flag: number;
+            mc_flag: number;
+            mpr_flag: number;
+            npi_flag: number;
+            psi_flag: number;
+            rnss_flag: number;
+            scig_flag: number;
+            city_flag: number;
+            county_flag: number;
+            district_flag: number;
+            other_flag: number;
         } = {
             chpg_flag: 0,
             cdbg_flag: 0,
@@ -277,6 +313,17 @@ module.exports = function(map: Object, p1: Promise, p2: Promise) {
             neu_flag: 0,
             ihoi_flag: 0,
             ihop_flag: 0,
+            bbfs_flag: 0,
+            cens_flag: 0,
+            loma_flag: 0,
+            lecs_flag: 0,
+            lpc_flag: 0,
+            mc_flag: 0,
+            mpr_flag: 0,
+            npi_flag: 0,
+            psi_flag: 0,
+            rnss_flag: 0,
+            scig_flag: 0,
            
             city_flag: 0,
             county_flag: 0,
@@ -308,6 +355,17 @@ module.exports = function(map: Object, p1: Promise, p2: Promise) {
         (($('#neu').is(':checked'))) ? flags.neu_flag = 1: flags.neu_flag = 0;
         (($('#ihoi').is(':checked'))) ? flags.ihoi_flag = 1: flags.ihoi_flag = 0;
         (($('#ihop').is(':checked'))) ? flags.ihop_flag = 1: flags.ihop_flag = 0;
+        (($('#bbfs').is(':checked'))) ? flags.bbfs_flag = 1: flags.bbfs_flag = 0;
+        (($('#cens').is(':checked'))) ? flags.cens_flag = 1: flags.cens_flag = 0;
+        (($('#loma').is(':checked'))) ? flags.loma_flag = 1: flags.loma_flag = 0;
+        (($('#lpc').is(':checked'))) ? flags.lpc_flag = 1: flags.lpc_flag = 0;
+        (($('#lecs').is(':checked'))) ? flags.lecs_flag = 1: flags.lecs_flag = 0;
+        (($('#mc').is(':checked'))) ? flags.mc_flag = 1: flags.mc_flag = 0;
+        (($('#mrp').is(':checked'))) ? flags.mrp_flag = 1: flags.mrp_flag = 0;
+        (($('#npi').is(':checked'))) ? flags.npi_flag = 1: flags.npi_flag = 0;
+        (($('#psi').is(':checked'))) ? flags.psi_flag = 1: flags.psi_flag = 0;
+        (($('#rnss').is(':checked'))) ? flags.rnss_flag = 1: flags.rnss_flag = 0;
+        (($('#scig').is(':checked'))) ? flags.scig_flag = 1: flags.scig_flag = 0;
         
 
         (($('#city').is(':checked'))) ? flags.city_flag = 1: flags.city_flag = 0;

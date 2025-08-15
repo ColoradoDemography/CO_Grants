@@ -34,13 +34,13 @@ module.exports = function(d: Object): Object {
     if (program === "CTF") {
         start = start + 1100000;
     }
-    if (program === "SEV/FML") {
+    if (program === "SEV_FML") {
         start = start + 1000000;
     }
     if (program === "CSBG") {
         start = start + 600000;
     }
-    if (program === "CDBG" || program === "CDBGED" || program === "CDBGPF") {
+    if (program === "CDBG" || program === "CDBGED" || program === "CDBGPF" || program === "CDBGPS") {
         start = start + 500000;
     }
     if (program === "EIAF") {
@@ -58,7 +58,7 @@ module.exports = function(d: Object): Object {
     if (program === "VFP") {
         start = start + 800000;
     }
-    if (program === "SAR" || program === "SAR Tier 1" || program === "SAR Tier 3" ||program === "SAR Tier 2" || program === "SAR EoY") {
+    if (program === "SAR" || program === "SAR Tier 1" || program === "SAR Tier 3" ||program === "SAR Tier 2" || program === "SAR EoY" || program === "BSARFX") {
         start = start + 700000;
     }
     if (program === "FCB") {
@@ -74,6 +74,48 @@ module.exports = function(d: Object): Object {
         start = start + 1400000;
     }
     if (program === "NEU") {
+        start = start + 1400000;
+    }
+    if (program === "IHOP") {
+        start = start + 1400000;
+    }
+    if (program === "IHOI") {
+        start = start + 1400000;
+    }
+    if (program === "HPLN") {
+        start = start + 1400000;
+    }
+    if (program === "PSI") {
+        start = start + 1400000;
+    }
+    if (program === "LOMA") {
+        start = start + 1400000;
+    }
+    if (program === "LPC") {
+        start = start + 1400000;
+    }
+    if (program === "LECS") {
+        start = start + 1400000;
+    }
+    if (program === "BBFS") {
+        start = start + 1400000;
+    }
+    if (program === "CENS") {
+        start = start + 1400000;
+    }
+    if (program === "MC") {
+        start = start + 1400000;
+    }
+    if (program === "MRP") {
+        start = start + 1400000;
+    }
+    if (program === "NPI") {
+        start = start + 1400000;
+    }
+    if (program === "RNSS") {
+        start = start + 1400000;
+    }
+    if (program === "SCIG") {
         start = start + 1400000;
     }
 
