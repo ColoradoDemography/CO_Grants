@@ -253,7 +253,6 @@ module.exports = function(map: Object, p1: Promise, p2: Promise) {
         var flags: {
             chpg_flag: number;
             cdbg_flag: number;
-            dr_flag: number;
             csbg_flag: number;
             ms_flag: number;
             dcfa_flag: number;
@@ -284,6 +283,10 @@ module.exports = function(map: Object, p1: Promise, p2: Promise) {
             psi_flag: number;
             rnss_flag: number;
             scig_flag: number;
+            dr_flag: number;
+            drr_flag: number;
+            adug_flag: number;
+            toci_flag: number;
             city_flag: number;
             county_flag: number;
             district_flag: number;
@@ -291,7 +294,6 @@ module.exports = function(map: Object, p1: Promise, p2: Promise) {
         } = {
             chpg_flag: 0,
             cdbg_flag: 0,
-            dr_flag: 0,
             csbg_flag: 0,
             ms_flag: 0,
             ccpi_flag: 0,
@@ -324,6 +326,10 @@ module.exports = function(map: Object, p1: Promise, p2: Promise) {
             psi_flag: 0,
             rnss_flag: 0,
             scig_flag: 0,
+            dr_flag: 0,
+            drr_flag: 0,
+            adug_flag: 0,
+            toci_flag: 0,
            
             city_flag: 0,
             county_flag: 0,
@@ -333,7 +339,6 @@ module.exports = function(map: Object, p1: Promise, p2: Promise) {
 
         (($('#chpg').is(':checked'))) ? flags.chpg_flag = 1: flags.chpg_flag = 0;
         (($('#cdbg').is(':checked'))) ? flags.cdbg_flag = 1: flags.cdbg_flag = 0;
-        (($('#dr').is(':checked'))) ? flags.dr_flag = 1: flags.dr_flag = 0;
         (($('#csbg').is(':checked'))) ? flags.csbg_flag = 1: flags.csbg_flag = 0;
         (($('#ms').is(':checked'))) ? flags.ms_flag = 1: flags.ms_flag = 0;
         (($('#ccpi').is(':checked'))) ? flags.ccpi_flag = 1: flags.ccpi_flag = 0;
@@ -366,6 +371,10 @@ module.exports = function(map: Object, p1: Promise, p2: Promise) {
         (($('#psi').is(':checked'))) ? flags.psi_flag = 1: flags.psi_flag = 0;
         (($('#rnss').is(':checked'))) ? flags.rnss_flag = 1: flags.rnss_flag = 0;
         (($('#scig').is(':checked'))) ? flags.scig_flag = 1: flags.scig_flag = 0;
+        (($('#dr').is(':checked'))) ? flags.dr_flag = 1: flags.dr_flag = 0;
+        (($('#drr').is(':checked'))) ? flags.drr_flag = 1: flags.drr_flag = 0;
+        (($('#adug').is(':checked'))) ? flags.adug_flag = 1: flags.adug_flag = 0;
+        (($('#toci').is(':checked'))) ? flags.toci_flag = 1: flags.toci_flag = 0;
         
 
         (($('#city').is(':checked'))) ? flags.city_flag = 1: flags.city_flag = 0;

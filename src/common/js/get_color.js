@@ -4,21 +4,24 @@ module.exports = function getcolor(program: string): string {
     'use strict';
 
     //["FML", "SEV_DIST", "VFP", "CTF", "SAR", "FFB", "EIAF", "GAME", "REDI", "CSBG", "CDBG"];
-    if (program === "FML" || program === "CTF" || program === "SEV_FML" || program === "EIAF") {
+    if (program === "FCB" || program === "CTF" || program === "SEV_FML" || program === "VFP") {
         return "green";
     }
-    if (program === "CSBG" || program === "CDBG" || program === "CDBGED" || program === "CDBGPF"  || program === "CDBGPS" || program === "CHPG" || program === "MS" || program === "CVRF" || program === "NEU" || program === "MSOB" || program === "SBR" || program === "IHOI" || program === "IHOP" || program === "PSI" || program === "LPC" || program === "LOMA" || program === "BBFS" || program === "CENS" || program === "MCRF"  || program === "MCRG" || program === "MRP" || program === "NPI" || program === "RNSS" || program === "SCIG" || program === "HPLN" ) {
+    if (program === "CCPI" || program === "CSBG" || program === "MRP" || program === "DCFA"  || program === "GBMJ" || program === "LECS" || program === "MJ" || program === "POMH" || program === "SAR" || program === "PSI" || program === "CENS" || program === "BSARFX") {
         return "blue";
     }
-    if (program === "GAME" || program === "REDI" || program === "MJ" || program === "GBMJ" || program === "POMH" || program === "CCPI" || program === "DCFA" || program === "LECS") {
+    if (program === "BBFS" || program === "CVRF" || program === "LOMA" || program === "NEU" || program === "RNSS" || program === "SBR" || program === "NPI") {
         return "red";
     }
-    if (program === "VFP" || program === "SAR" || program === "FCB" || program === "SAR Tier 1" || program === "SAR Tier 2" || program === "SAR Tier 3" || program === "SAR EoY"  || program === "BSARFX" || program === "FFB") {
+    if (program === "ADUG" || program === "CHPG" || program === "IHOI" || program === "IHOP" || program === "HPLN" || program === "LPC" || program === "SCIG"  || program === "TOCI") {
         return "purple";
     }
-    if (program === "DR") {
-        return "grey";
+    if (program === "CDBGCV" || program === "CDBGED" || program === "CDBGPF" || program === "CDBGPS" || program === "EIAF" || program === "GAME" || program === "MCRF" || program === "MCRG" || program === "MS" || program === "MSOB" || program === "REDI") {
+        return "dark yellow";
     }
-    return "black";
+    if (program === "DR" || program === "DRR") {
+        return "orange";
+    }
+    return "grey";
 
 }

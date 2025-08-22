@@ -5,7 +5,7 @@ module.exports = function(map: Object) {
 
     //Custom Title Control
     var title = L.control({
-        position: 'topleft'
+        position: 'topright'
     });
     title.onAdd = function() {
         var div = L.DomUtil.create('div', 'title bord');

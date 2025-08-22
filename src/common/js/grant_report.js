@@ -30,6 +30,7 @@ module.exports = function(d: Object, map: Object, cities: Array < Object > , dat
         cdbg: 0,
         chpg: 0,
         dr: 0,
+        drr: 0,
         ms: 0,
         pomh: 0,
         ccpi: 0,
@@ -49,7 +50,9 @@ module.exports = function(d: Object, map: Object, cities: Array < Object > , dat
         mrp: 0,
         npi: 0,
         rnss: 0,
-        scig: 0
+        scig: 0,
+        adug: 0,
+        toci: 0
     };
 
     //iterate over results array to get totals for each program
@@ -68,7 +71,7 @@ module.exports = function(d: Object, map: Object, cities: Array < Object > , dat
         if (program === "CTF") {
             program_totals.ctf += dollars;
         }
-        if (program === "SAR" || program === "SAR Tier 1" || program === "SAR Tier 2" |program === "SAR Tier 3" || program === "SAR EoY" || program === "BSARFX") {
+        if (program === "SAR" || program === "BSARFX") {
             program_totals.sar += dollars;
         }
         if (program === "FCB") {
@@ -101,7 +104,7 @@ module.exports = function(d: Object, map: Object, cities: Array < Object > , dat
         if (program === "DR" || program === "DRR") {
             program_totals.dr += dollars;
         }
-        if (program === "MS") {
+        if (program === "MS" || program === "MSOB") {
             program_totals.ms += dollars;
         }
         if (program === "POMH") {
@@ -160,6 +163,12 @@ module.exports = function(d: Object, map: Object, cities: Array < Object > , dat
         }
         if (program === "SCIG") {
             program_totals.scig += dollars;
+        }
+        if (program === "ADUG") {
+            program_totals.adug += dollars;
+        }
+        if (program === "TOCI") {
+            program_totals.toci += dollars;
         }
     });
 
@@ -222,7 +231,9 @@ module.exports = function(d: Object, map: Object, cities: Array < Object > , dat
             ((program_totals.mrp > 0) ? ("<b>MRP</b>: <i> " + accounting.formatMoney(program_totals.mrp) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
             ((program_totals.npi > 0) ? ("<b>NPI</b>: <i> " + accounting.formatMoney(program_totals.npi) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
             ((program_totals.rnss > 0) ? ("<b>RNSS</b>: <i> " + accounting.formatMoney(program_totals.rnss) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
-            ((program_totals.scig > 0) ? ("<b>SCIG</b>: <i> " + accounting.formatMoney(program_totals.scig) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "")
+            ((program_totals.scig > 0) ? ("<b>SCIG</b>: <i> " + accounting.formatMoney(program_totals.scig) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
+            ((program_totals.adug > 0) ? ("<b>ADUG</b>: <i> " + accounting.formatMoney(program_totals.adug) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "") +
+            ((program_totals.toci > 0) ? ("<b>TOCI</b>: <i> " + accounting.formatMoney(program_totals.toci) + "</i>&nbsp;&nbsp;&nbsp;&nbsp;") : "")
             //"</span><br /><button style='margin-top: 20px;' id='dlcsv'>Download</button>"
     });
 

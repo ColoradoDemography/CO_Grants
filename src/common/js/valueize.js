@@ -28,6 +28,9 @@ module.exports = function(d: Object): Object {
     if (program === "DR") {
         start = start + 100000;
     }
+    if (program === "DRR") {
+        start = start + 100000;
+    }
     if (program === "FML") {
         start = start + 1200000;
     }
@@ -117,6 +120,12 @@ module.exports = function(d: Object): Object {
     }
     if (program === "SCIG") {
         start = start + 3000000;
+    }
+    if (program === "ADUG") {
+        start = start + 3100000;
+    }
+    if (program === "TOCI") {
+        start = start + 3200000;
     }
 
     //return difference from year Jan 1, 2000 in number of days
