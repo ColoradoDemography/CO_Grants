@@ -16,7 +16,7 @@ module.exports = function(map: Object, refreshdata: Function) {
             //Stimulus Programs
             '<button type="button" class="collapsible"><span style="color:rgb(206,3,3)">Stimulus Programs</span></button>'+
             //'<button type="button" class="collapsible"><input id="option1" type="checkbox" checked>Stimulus Programs</button>'+
-            '<div class="collapse"><ul>'+
+            '<div class="collapse"><ul><br />'+
             '<li><input class="stimulus leg" id="neu" type="checkbox" checked /><span style="color:rgb(206,3,3)" title="American Rescue Plan: NEU"> American Rescue Plan: NEU</span></li><br />' +
             '<li><input class="stimulus leg" id="bbfs" type="checkbox" checked /><span style="color:rgb(206,3,3)" title="Broadband Federal Stimulus"> Broadband Federal Stimulus</span></li><br />' +
             '<li><input class="stimulus leg" id="cvrf" type="checkbox" checked /><span style="color:rgb(206,3,3)" title="Coronavirus Relief Fund"> Coronavirus Relief Fund</span></li><br />' +
@@ -29,7 +29,7 @@ module.exports = function(map: Object, refreshdata: Function) {
             //Community Services
             '<button type="button" class="collapsible"><span style="color:rgb(0,0,255)">Community Services</span></button>'+
             //'<input id="option2" type="checkbox" checked>Community Services'+
-            '<div class="collapse"><ul>'+
+            '<div class="collapse"><ul><br />'+
             '<li><input class="leg community" id="cens" type="checkbox" checked /><span style="color:rgb(0,0,255)" title="Census Grant Outreach"> Census Grant Outreach</span></li><br />' +
              '<li><input class="leg community" id="sar" type="checkbox" checked /><span style="color:rgb(0,0,255)" title="Colorado Search and Rescue Program"> Colorado Search and Rescue</span></li><br />' +
             '<li><input class="leg community" id="ccpi" type="checkbox" checked /><span style="color:rgb(0,0,255)" title="Community Crime Prevention Initiative"> Community Crime Prevention Initiative</span></li><br />' +
@@ -45,7 +45,7 @@ module.exports = function(map: Object, refreshdata: Function) {
             //Formulaic Programs 
             '<button type="button" class="collapsible"><span style="color:rgb(0,126,0)">Formulaic Programs</span></button>'+
             //'<input id="option3" type="checkbox" checked>Formulaic Programs'+
-            '<div class="collapse"><ul>'+
+            '<div class="collapse"><ul><br />'+
             '<li><input class="leg formulaic" id="ctf" type="checkbox" /><span style="color:rgb(0,126,0)" title="Conservation Trust Fund"> Conservation Trust Fund</span></li><br />' +
             '<li><input class="leg formulaic" id="sevedd" type="checkbox" /><span style="color:rgb(0,126,0)" title="Direct Distribution"> Direct Distribution</span></li><br />' +
             '<li><input class="leg formulaic" id="ffb" type="checkbox" checked /><span style="color:rgb(0,126,0)" title="Firefighter Cardiac Benefit Program"> Firefighter Cardiac Benefit</span></li><br />' +
@@ -55,7 +55,7 @@ module.exports = function(map: Object, refreshdata: Function) {
             //Housing/Planning
             '<button type="button" class="collapsible"><span style="color:rgb(126,0,126)">Housing/Planning</span></button>'+
             //'<input id="option4" type="checkbox" checked>Housing/Planning'+
-            '<div class="collapse"><ul>'+
+            '<div class="collapse"><ul><br />'+
             //'<input class="leg housing" id="adug" type="checkbox" checked /><span style="color:rgb(126,0,126)" title="Accessory Dwelling Units">Accessory Dwelling Units</span><br />' +
             '<li><input class="leg housing" id="chpg" type="checkbox" checked /><span style="color:rgb(126,0,126)" title="Colorado Heritage Planning Grants"> Colorado Heritage Planning Grants</span></li><br />' +
             '<li><input class="leg housing" id="ihoi" type="checkbox" checked /><span style="color:rgb(126,0,126)" title="Housing Incentive Grant Program"> Housing Incentive Grants</span></li><br />' +
@@ -68,7 +68,7 @@ module.exports = function(map: Object, refreshdata: Function) {
             //Disaster and Recovery Programs
             '<button type="button" class="collapsible"><span style="color:rgb(211,72,26)">Disaster and Recovery Programs</span></button>'+
             //'<input id="option5" type="checkbox" checked>Disaster and Recovery Programs'+
-            '<div class="collapse"><ul>'+
+            '<div class="collapse"><ul><br />'+
             '<li><input class="leg disaster" id="dr" type="checkbox" checked /><span style="color:rgb(211,72,26)" title="Community Development Block Grant -Disaster Recovery"> CDBG - Disaster Recovery</span></li><br />' +
             '<li><input class="leg disaster" id="drr" type="checkbox" checked /><span style="color:rgb(211,72,26)" title="Disaster Resilience Rebuilding Program"> Disaster Resilience Rebuilding</span></li><br />' +
             '</ul></div><br />'+
@@ -76,7 +76,7 @@ module.exports = function(map: Object, refreshdata: Function) {
             //Economic Development
             '<button type="button" class="collapsible"><span style="color:rgb(0,0,0)">Economic Development</span></button>'+
             //'<input id="option6" type="checkbox" checked>Economic Development'+
-            '<div class="collapse"><ul>'+
+            '<div class="collapse"><ul><br />'+
             '<li><input class="leg economic" id="cdbg" type="checkbox" checked /><span style="color:rgb(0,0,0)" title="Community Development Block Grants - Public Facilities & Services"> CDBG - Public Facilities & Services</span></li><br />' +
             '<li><input class="leg economic" id="cdbg" type="checkbox" checked /><span style="color:rgb(0,0,0)" title="Community Development Block Grants - Economic Development"> CDBG - Economic Development</span></li><br />' +
             '<li><input class="leg economic" id="eiaf" type="checkbox" checked /><span style="color:rgb(0,0,0)" title="Energy and Mineral Impact Assistance Fund"> Energy and Mineral Impact Assistance Fund</span></li><br />' +
